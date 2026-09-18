@@ -1,49 +1,22 @@
 name: REALM account deletion
-description: Request deletion of a REALM cloud account
-title: "Account deletion request"
+description: Do not post your Google email here. Use the private website form.
+title: "Do not use — open the private deletion page"
 labels: ["account-deletion"]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form to request deletion of a REALM account.
-        Do not paste passwords, backup files, or authentication tokens.
-        This issue is public. If you do not want a public reply, say so below and close the issue after submitting — the request is still processed.
-  - type: input
-    id: google_email
-    attributes:
-      label: Google account email used to sign in to REALM
-      description: Used only to find the account.
-    validations:
-      required: true
-  - type: input
-    id: username
-    attributes:
-      label: REALM username (if you have one)
-    validations:
-      required: false
-  - type: dropdown
-    id: package
-    attributes:
-      label: Which REALM did you use?
-      options:
-        - Google Play REALM (app.aetherrealm.realm)
-        - REALM EA Early Access (app.aetherrealm.realm.web)
-        - Not sure
-    validations:
-      required: true
-  - type: textarea
-    id: notes
-    attributes:
-      label: Anything else needed to identify the account
-    validations:
-      required: false
+        **Do not write your Google email in this issue.** Issues on this repository are public.
+
+        Delete a REALM account from the app (REALM 1.2.3 Profile → Delete Account) or from the private form:
+
+        https://aetherrealmapp.github.io/delete-account/
+
+        That form sends the email only to REALM’s backend. It is not published here.
   - type: checkboxes
-    id: confirm
+    id: redirect
     attributes:
-      label: Confirmation
+      label: Use the private form
       options:
-        - label: I request deletion of the REALM cloud account matching this Google identity.
-          required: true
-        - label: I understand sign-out and uninstall do not delete the cloud account by themselves.
+        - label: I will use https://aetherrealmapp.github.io/delete-account/ and I will not post my Google email in this public issue.
           required: true
